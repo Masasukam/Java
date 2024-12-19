@@ -26,12 +26,67 @@
   - async (message queue): do something else while the coffee is being made, come back when ready
     - requesting microservice sends a message to the queue, responsing microservice receives the message from the queue and process the message when available
    
-### Dec 18, Wednesday
+### Dec 18, Wednesday - Strings, Data Structures
 - String
   - String vs stringbuilder vs stringBuffer
   - String object and pool
   - Integer object and pool: put in the pool if < 128
   - == compares object/address, not value
   - .equals needs to be overwritten (with hashcode), otherwise same as ==
+- Data Structures
+  - Collection vs Collections
+  - Collection: Set, List, Queue
+    - Set: HashSet, LinkedHashSet, TreeSet
+    - List: LinkedList vs ArrayList
+    - Queue: PriorityQueue -> heap
+  - Map: HashMap, LinkedHashMap, HashTable, CurrentHashMap, TreeMap
  
-### Dec 19, Thursday
+### Dec 19, Thursday - JVM
+Compiled vs. interpreted
+- Translate all code at once, interpreted translates line by line
+
+
+**JVM** - https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/
+- Class Loader: bootstrap / extension/ application class extension
+- Runtime Data Area
+  - method area: static, pool
+  - Heap Area: objects initialized using "new" keyword
+  - Stack Area: multi threads
+  - PC register area: multi threads
+  - native method stack
+- Execution Engine
+  - interpreter: executing byte code after compileling .java file to .class (byte code)
+  - JIT compiler
+  - Garbage Collector
+    - Serial
+    - Parallel
+    - G1: scan each chunk and does GC based on priority
+   
+
+**KeyWords**
+- modifiers
+  - public/private, protected, static, final, abstract, synchronized, native, strictfp, transient, volatile
+    - final variable needs to be initialized, pointer can't be updated.
+      - Can use another pointer to point to the object, then modify object's value
+    - final method can't be overriden
+    - final class can't be inherited
+    - static is global, shared among all instances
+      - can be static variable, method, class (can't be at top level), block
+        
+**OOP**
+- Inheritance
+  - implements: can implement multiple interfaces
+  - extends: only able to extend one interface / class
+- Encapsulation
+  - data protection
+  - private, and use getter and setter
+- Abstraction: abstract class, interface (by extend and implements)
+- Polymorphism:
+  - overload: compile time
+  - override: runtime
+    
+**Exceptions**
+- checked (compile time): IO
+  - need to be handled by try-catch-finally
+  - can do try-finally combo and try-catch combo
+- unchecked (runtime): NULL pointer
