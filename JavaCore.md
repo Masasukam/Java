@@ -1,6 +1,7 @@
 # Core Java
 
 ### Overview Dec 17, Tuesday 
+![image](https://github.com/user-attachments/assets/0f6b5205-fe9c-4093-a72c-4036ca4322ed)
 
 - Hierarchy
   - User sends requests to server from their device(frontend), and getting responses from relevant microservices through API gateway
@@ -28,12 +29,16 @@
    
 ### Dec 18, Wednesday - Strings, Data Structures
 - String
+  - ![image](https://github.com/user-attachments/assets/eaf16312-7bb2-44a2-8891-45aaad814cdb)
+
   - String vs stringbuilder vs stringBuffer
   - String object and pool
   - Integer object and pool: put in the pool if < 128
   - == compares object/address, not value
   - .equals needs to be overwritten (with hashcode), otherwise same as ==
 - Data Structures
+  - ![image](https://github.com/user-attachments/assets/d9f48e55-bd24-4818-819f-d5ccbbee622b)
+
   - Collection vs Collections
   - Collection: Set, List, Queue
     - Set: HashSet, LinkedHashSet, TreeSet
@@ -47,6 +52,8 @@ Compiled vs. interpreted
 
 
 **JVM** - https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/
+- ![image](https://github.com/user-attachments/assets/71bbd982-a0b1-4bf1-a34c-8025e75b272e)
+
 - Class Loader: bootstrap / extension/ application class extension
 - Runtime Data Area
   - method area: static, pool
