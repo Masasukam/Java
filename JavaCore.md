@@ -27,7 +27,7 @@
   - async (message queue): do something else while the coffee is being made, come back when ready
     - requesting microservice sends a message to the queue, responsing microservice receives the message from the queue and process the message when available
    
-### Dec 18, Wednesday - Strings, Data Structures
+### Strings, Data Structures - Dec 18, Wednesday
 - String
   - ![image](https://github.com/user-attachments/assets/eaf16312-7bb2-44a2-8891-45aaad814cdb)
 
@@ -46,7 +46,7 @@
     - Queue: PriorityQueue -> heap
   - Map: HashMap, LinkedHashMap, HashTable, CurrentHashMap, TreeMap
  
-### Dec 19, Thursday - JVM
+### JVM, KeyWords, OOP, Exceptions - Dec 19, Thursday
 Compiled vs. interpreted
 - Translate all code at once, interpreted translates line by line
 
@@ -97,3 +97,86 @@ Compiled vs. interpreted
   - need to be handled by try-catch-finally
   - can do try-finally combo and try-catch combo
 - unchecked (runtime): NULL pointer
+
+### Generics, Java Features - Dec 20 Friday
+**Generics**
+- generic class allows you to create a single class definition that works with different data types, enhancing code reusability and type safety. You define a generic class using a type parameter (T, E, K, V, etc.) that can be replaced with actual types when creating an instance of the class.
+  - ```
+    // Define a generic class
+    public class Box<T> {
+        private T item;
+    
+        public void setItem(T item) 
+            this.item = item;
+  
+        public T getItem()
+            return item;
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            // Create a Box instance for Integer
+            Box<Integer> integerBox = new Box<>();
+            integerBox.setItem(123);
+            System.out.println("Integer Box: " + integerBox.getItem());
+    
+            // Create a Box instance for String
+            Box<String> stringBox = new Box<>();
+            stringBox.setItem("Hello Generics");
+            System.out.println("String Box: " + stringBox.getItem());
+        }
+    }
+    ```
+- A generic method is a method that can operate on different types. You define a generic method by including the type parameter before the method's return type.
+  - ```
+    public class Utility {
+        // Generic method
+        public static <T> void printArray(T[] array) {
+            for (T element : array)
+                System.out.print(element + " ");
+            System.out.println();
+        }
+    }
+    
+    public class Main {
+        public static void main(String[] args) {
+            Integer[] intArray = {1, 2, 3, 4, 5};
+            String[] strArray = {"A", "B", "C"};
+    
+            Utility.printArray(intArray);
+            Utility.printArray(strArray);
+        }
+    }
+    ```
+
+**Java Features**
+- Lambda expressions: It simplifies the code and improves reading, no need to create object instance.
+  - syntax :  (arguments)  → {body}
+  - ![image](https://github.com/user-attachments/assets/07152e0d-5718-49d7-b82e-a4c869def7e0)
+- Functional Interface (works together with lambda)
+  - A functional interface in Java is an interface with exactly one abstract method. It can contain default and static methods but only one abstract method.
+  - ```
+    @FunctionalInterface
+    interface MathOperation {
+        int operate(int a, int b); // Single abstract method
+    }
+  
+    public static void main(String[] args) {
+        MathOperation addition = (a, b) -> a + b;
+        System.out.println("Result: " + addition.operate(5, 3)); // Output: 8
+    }
+    ```
+- Default method: It is a method that is defined in a interface, can be overriden by sub classes
+- Optional Class is a container object which may or may not contain a non-null value. Instead of returning a null value, methods return an Optional object, allowing the caller to explicitly check if a value is present or not.
+  - ![image](https://github.com/user-attachments/assets/8256f350-07cd-47fa-90c6-7517e9825a5a)
+- Stream
+  - ![image](https://github.com/user-attachments/assets/07a6a673-1b16-420b-bf46-1bf3f89fa441)
+  - ![image](https://github.com/user-attachments/assets/6346ee44-f989-49e4-b967-3b07d4760f5a)
+  - ![image](https://github.com/user-attachments/assets/130825f8-8a75-427e-b09c-c514ea537aca)
+
+
+
+
+ 
+
+
