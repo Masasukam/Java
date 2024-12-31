@@ -174,6 +174,22 @@ Compiled vs. interpreted
   - ![image](https://github.com/user-attachments/assets/6346ee44-f989-49e4-b967-3b07d4760f5a)
   - ![image](https://github.com/user-attachments/assets/130825f8-8a75-427e-b09c-c514ea537aca)
 
+### Thread, Lock - Dec 23 Monday
+- Regular threads can only extend the Thread class
+- Runnable threads implement the Runnable Interface, can implement multiple interfaces
+- Callable threads implements the Callable interface, can return a value and throw checked exceptions.
+  - Return Type: T (generic type, returned by the call() method).
+  - Execution submitted to an ExecutorService
+- ![image](https://github.com/user-attachments/assets/6b5f580d-d439-442b-8e28-d4a59233c705)
+
+**ThreadPool**
+- Executors is an utility class (ExecutorService is an interface)
+- Basic components includes: Task Queue, Worker Thread, Executor(Pool)
+- submit(Callable/Runnable task), return result
+- https://www.youtube.com/watch?v=msay7O2NdLw
+
+
+
 
 
 
